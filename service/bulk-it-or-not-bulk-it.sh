@@ -9,8 +9,18 @@ source $THIS_DIR/set-of-vars.sh
 echo "$THIS_DIR THIS_DIR"
 echo "$dgraphVersion dgraphVersion"
 
-SCHEMA="./${service_loc}/1million.schema"
-RDFFILE="./${service_loc}/1million.rdf.gz"
+# modified schema where default type is switched to string
+# after this change, predicate_with_default_type will appear
+SCHEMA="./${service_loc}/export/dgraph-1-2018-09-27-19-54.schema"
+
+# unmodified schema from export; none of my predicates appear in dgraph schema
+#SCHEMA="./${service_loc}/export/dgraph-1-2018-09-27-19-54.schema.gz"
+
+RDFFILE="./${service_loc}/export/dgraph-1-2018-09-27-19-54.rdf.gz"
+
+# The original dgraph movie dataset
+#SCHEMA="./${service_loc}/1million.schema"
+#RDFFILE="./${service_loc}/1million.rdf.gz"
 
 
 my_server=${addrHost}:7080

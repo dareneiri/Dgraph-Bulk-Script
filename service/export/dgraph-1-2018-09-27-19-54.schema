@@ -1,0 +1,13 @@
+name:string @index(term) @lang .
+genre:uid @reverse .
+starring:uid .
+actor.film:uid .
+_share_hash_:string @index(exact) .
+director.film:uid @reverse .
+performance.film:uid .
+performance.actor:uid .
+initial_release_date:datetime @index(year) .
+performance.character:uid .
+predicate_with_default_type:string . 
+predicate_with_no_uid_count:string .
+predicate_with_index_no_uid_count:string @index(exact) .
